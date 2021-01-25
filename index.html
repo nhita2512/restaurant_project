@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../main.css">
+</head>
+
+<body>
+  <header>
+    <input type="checkbox">
+    <div class="menu-icon">
+      <div class="menu-line">
+
+      </div>
+    </div>
+    <div class="menu-item">
+      <ul>
+        <li>
+          <a href="">Home</a>
+        </li>
+        <li>
+          <a href="">Menu </a>
+        </li>
+        <li>
+          <a href="">Gallery</a>
+        </li>
+        <li>
+          <a href="">Our Story</a>
+        </li>
+        <li>
+          <a href="">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div class="header-text">
+      <h1>The Deck Restaurant</h1>
+      <button class="orderBtn" onclick="document.getElementById('id01').style.display='block'">Order Now</button>
+    </div>
+    <div class="slideshow-container">
+      <div class="animatedSlide fade ">
+        <img src="https://media-cdn.tripadvisor.com/media/photo-s/0b/5f/e9/cf/riverside-retreat.jpg" style="width:100%">
+      </div>
+      <div class="animatedSlide fade ">
+        <img src="https://www.hoteljob.vn/uploads/images/18-06-15-13/deck4_crop_1170_400_100.jpg" style="width:100%">
+      </div>
+      <div class="animatedSlide fade">
+        <img src="https://cdn.huongnghiepaau.com/wp-content/uploads/2019/01/rumam-bistro-cafe-600x400.jpg"
+          style="width:100%">
+      </div>
+    </div>
+  </header>
+  <!-- The Modal (contains the Sign Up form) -->
+  <div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"><i
+        class="fa fa-times-circle"></i></span>
+
+    <form class="modal-content" action="/action_page.php">
+      <h2>ORDER FORM</h2>
+      <div class="container">
+        <label for="fname"> Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+        <label for="country">Guests:
+          <label for="">2-4 people
+            <input type="checkbox"></label>
+          <label for="">5-10 people
+            <input type="checkbox"></label>
+          <label for="">More than 10 people
+            <input type="checkbox"></label>
+        </label>
+        <br>
+        <label for="fname">Date</label>
+        <input type="date">
+        <label for="fname">Time</label>
+        <input type="time">
+
+
+        <div class="clearfix">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'"
+            class="cancelbtn">Cancel</button>
+          <button type="submit" class="order">Order</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <section class="menu">
+    <h1>Menu</h1>
+    <div class="card-columns">
+      <div class="card">
+        <div class="card-body text-center">
+          <img src="https://image.freepik.com/free-photo/selection-various-cocktails-table_140725-2909.jpg" alt="">
+          <div class="card-text">
+            <h4>Drinks</h4>
+            <span class="card-text">Some text inside the first card</span>
+          </div>
+        </div>
+      </div>
+      <div class="card ">
+        <div class="card-body text-center">
+          <img
+            src="https://image.freepik.com/free-photo/assorted-meat-kebab-with-onions-herbs-grilled-vegetables_140725-5629.jpg"
+            alt="">
+          <div class="card-text">
+            <h4>Popular dishes</h4>
+            <span class="card-text">Some text inside the first card</span>
+          </div>
+        </div>
+      </div>
+      <div class="card ">
+        <div class="card-body text-center">
+          <img src="https://image.freepik.com/free-photo/seafood-ice-with-white-wine_63253-8078.jpg" alt="">
+          <div class="card-text">
+            <h4>Combo Seafood</h4>
+            <span class="card-text">Some text inside the first card</span>
+          </div>
+        </div>
+      </div>
+      <div class="card ">
+        <div class="card-body text-center">
+          <img
+            src="https://image.freepik.com/free-photo/indian-dhal-spicy-curry-bowl-spices-herbs-rustic-black-wooden-table_2829-18712.jpg"
+            alt="">
+          <div class="card-text">
+            <h4>Signature</h4>
+            <span class="card-text">Some text inside the first card</span>
+          </div>
+        </div>
+      </div>
+      <div class="card ">
+        <div class="card-body text-center">
+          <img src="https://image.freepik.com/free-photo/club-sandwich-panini-with-ham-cheese-picnic-food_2829-7093.jpg"
+            alt="">
+          <div class="card-text">
+            <h4>Special Breakfast</h4>
+            <span class="card-text">Some text inside the first card</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body text-center">
+          <img src="https://image.freepik.com/free-photo/vegan-food-chalk-pot_23-2148290825.jpg" alt="">
+          <div class="card-text">
+            <h4>Vegetarian</h4>
+            <span class="card-text">Some text inside the first card</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hinhAnh">
+    <h1>Gallery</h1>
+    <!-- div column hinh -->
+    <div class="row">
+      <div class="column">
+        <img src="https://image.freepik.com/free-photo/penne-pasta-with-meatballs-tomato-sauce-white-bowl_2829-7663.jpg"
+          alt="Snow" width="100%" onclick="openModal();currentSlide(1)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img
+          src="https://image.freepik.com/free-photo/top-view-tasty-italian-pasta-with-meatballs-different-seasonings-dark-blue-desk_140725-58483.jpg"
+          alt="Forest" width="100%" onclick="openModal();currentSlide(2)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img
+          src="https://image.freepik.com/free-photo/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table_2829-19739.jpg"
+          alt="Mountains" width="100%" onclick="openModal();currentSlide(3)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img src="https://image.freepik.com/free-photo/chicken-skewers-with-slices-sweet-peppers-dill_2829-18813.jpg"
+          alt="Snow" width="100%" onclick="openModal();currentSlide(4)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img
+          src="https://img.freepik.com/free-photo/curry-with-chicken-onions-indian-food-asian-cuisine-top-view_2829-6240.jpg?size=626&ext=jpg&ga=GA1.2.1563629046.1610890453"
+          alt="Forest" width="100%" onclick="openModal();currentSlide(5)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img
+          src="https://img.freepik.com/free-photo/fried-rice-with-minced-pork-tomato-carrot-cucumber-plate_1150-27178.jpg?size=626&ext=jpg&ga=GA1.2.1563629046.1610890453"
+          alt="Mountains" width="100%" onclick="openModal();currentSlide(6)" class="hover-shadow">
+      </div>
+    </div>
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+          <img
+            src="https://image.freepik.com/free-photo/penne-pasta-with-meatballs-tomato-sauce-white-bowl_2829-7663.jpg"
+            alt="Snow" width="100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+          <img
+            src="https://image.freepik.com/free-photo/top-view-tasty-italian-pasta-with-meatballs-different-seasonings-dark-blue-desk_140725-58483.jpg"
+            alt="Snow" width="100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+          <img
+            src="https://image.freepik.com/free-photo/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table_2829-19739.jpg"
+            alt="Snow" width="100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+          <img src="https://image.freepik.com/free-photo/chicken-skewers-with-slices-sweet-peppers-dill_2829-18813.jpg"
+            alt="Snow" width="100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+          <img
+            src="https://img.freepik.com/free-photo/curry-with-chicken-onions-indian-food-asian-cuisine-top-view_2829-6240.jpg?size=626&ext=jpg&ga=GA1.2.1563629046.1610890453"
+            alt="Snow" width="100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6/ 6</div>
+          <img
+            src="https://img.freepik.com/free-photo/fried-rice-with-minced-pork-tomato-carrot-cucumber-plate_1150-27178.jpg?size=626&ext=jpg&ga=GA1.2.1563629046.1610890453"
+            alt="Snow" width="100%">
+        </div>
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlides(-1)"><i class="fa fa-angle-left"></i></a>
+        <a class="next" onclick="plusSlides(1)"><i class="fa fa-angle-right"></i></a>
+
+        <!-- Caption text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+      </div>
+      <!-- Section: counter (responsive) -->
+  </section>
+  <section class="counter">
+    <div class="row">
+      <div class="column">
+        <div class="soLieu">
+          <p><i class="fa fa-user"></i></p>
+          <h3>50+</h3>
+          <p>Partners</p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="soLieu">
+          <p><i class="fa fa-smile-o"></i></p>
+          <h3>100+</h3>
+          <p>Happy Clients</p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="soLieu">
+          <p><i class="fa fa-coffee"></i></p>
+          <h3>100+</h3>
+          <p>Meetings</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <section class="binhLuan">
+    <!-- Dung data-ride cho slide carousel -->
+    <div class="container mt-3">
+
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <h2>What customers talk about us</h2>
+          <div class="carousel-item active">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, numquam assumenda tempore, sit delectus
+              tenetur quia quibusdam, iusto voluptas aut distinctio minima veniam voluptatum omnis obcaecati sint beatae
+              deserunt eos?</p>
+          </div>
+          <div class="carousel-item">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, numquam assumenda tempore, sit delectus
+              tenetur quia quibusdam, iusto voluptas aut distinctio minima veniam voluptatum omnis obcaecati sint beatae
+              deserunt eos?</p>
+          </div>
+          <div class="carousel-item">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, numquam assumenda tempore, sit delectus
+              tenetur quia quibusdam, iusto voluptas aut distinctio minima veniam voluptatum omnis obcaecati sint beatae
+              deserunt eos?</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <section class="story">
+
+    <div class="row">
+      <div class="column">
+        <div class="item">
+          <img src="https://image.freepik.com/free-photo/male-female-hands-close-up-with-cocktails_1303-13495.jpg"
+            alt="">
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="item middle">
+          <h3>Our Story</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, id repudiandae quia, quaerat
+            reprehenderit ipsum asperiores sunt sint consequatur cupiditate, dicta voluptates odio doloremque illo ad
+            cumque facere veniam ullam.</p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="item">
+          <img
+            src="https://image.freepik.com/free-photo/people-toasting-red-wine-having-fun-christmas-dinner-reunion_101731-598.jpg"
+            alt="">
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15676.270127277176!2d106.7444602!3d10.8061398!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbdec33b98f6a0deb!2sThe%20Deck%20Saigon!5e0!3m2!1sen!2s!4v1611401020097!5m2!1sen!2s"
+    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+    tabindex="0"></iframe>
+  <footer class="lienHe">
+
+    <div class="row">
+      <div class="column">
+        <div class="info">
+          <h3>The Deck Saigon</h3>
+          <p>Beautiful bistro & wine bar located in the old Opium Manufacture of Saigon, serving French Brasserie food
+            with an extensive wine list.</p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="info">
+          <h3>ADDRESS</h3>
+          <p>74, Hai Ba Trung
+            District 1, Saigon
+            Vietnam</p>
+
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="info">
+          <h3>HOURS</h3>
+          <p>Monday - Sunday
+            Hours: 11AM – 11PM
+            Happy Hours: 3:30PM – 6:00PM</p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="info">
+          <h3>MORE INFO</h3>
+          <p>+84 2838 230 509
+            info@therefinerysaigon.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-12 col-lg-10">
+        <div class="copyright">
+          <p>Copyright by @The Deck SaiGon</p>
+        </div>
+      </div>
+      <div class="col-12 col-lg-2">
+        <div class="icon">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-google"></a>
+        </div>
+      </div>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-up"></i></button>
+  </footer>
+
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Main.js -->
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

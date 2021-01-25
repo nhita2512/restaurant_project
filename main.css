@@ -1,0 +1,613 @@
+body {
+  font-family: "Dancing Script", cursive;
+  box-sizing: border-box;
+  clear: both;
+}
+:root {
+  --color: #ffbf00;
+}
+/* orderButton */
+.orderBtn {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background: transparent;
+  /* background-color: var(--color); */
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.orderBtn:hover {
+  background-color: var(--color);
+}
+
+.orderBtn:active {
+  background-color: var(--color);
+  box-shadow: 0 5p rgba(0, 0, 0, 0.568);
+  transform: translateY(4px);
+}
+/* Modal box cho Login form*/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+.modal form {
+  margin-left: 25%;
+  background-color: var(--color);
+  width: 50%;
+  height: 96%;
+  border: 3px solid white;
+}
+.modal form h2 {
+  padding-top: 20px;
+  text-align: center;
+}
+/* Full-width inputs */
+.modal input[type="text"],
+.modal input[type="checkbox"],
+.modal input[type="date"],
+.modal input[type="time"] {
+  width: 100%;
+  padding: 12px 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.modal .order {
+  background-color: #4caf50;
+  padding: 10px 18px;
+  margin: 8px 0;
+  cursor: pointer;
+  width: auto;
+  border: none;
+}
+
+/* Add a hover effect for buttons */
+.modal .order:hover {
+  opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.modal .cancelbtn {
+  border: none;
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+/* Responsive cho Modal */
+@media screen and (max-width: 992px) {
+  .modal form {
+    margin-left: 0;
+    width: 100%;
+    height: 96%;
+  }
+}
+/* Section Header */
+header li {
+  list-style: none;
+  margin: 20px;
+}
+header a {
+  color: var(--color);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color: whitesmoke;
+}
+header {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* slideshow-container */
+.slideshow-container {
+  width: 100vw;
+  position: absolute;
+  margin: auto;
+  z-index: -1;
+}
+.animatedSlide {
+  display: none;
+}
+.animatedSlide img {
+  height: 100vh;
+}
+/* * Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: infinite;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+header::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+}
+header input {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+  position: fixed;
+}
+/* Header Input */
+/* Tao Hieu Ung Khi click vao se Transform thanh Dau Nhan x */
+header input:checked ~ .menu-icon .menu-line::before {
+  transform: rotate(90deg);
+  top: 0;
+}
+header input:checked ~ .menu-icon .menu-line::after {
+  transform: rotate(90deg);
+  top: 0;
+}
+header input:checked ~ .menu-icon .menu-line {
+  transform: rotate(135deg);
+  transition: 0.3s;
+}
+header input:checked ~ .menu-item {
+  right: 0;
+}
+.menu-item {
+  position: fixed;
+  width: 300px;
+  height: 100vh;
+  top: 0;
+  right: -100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.537);
+}
+.menu-icon {
+  width: 60px;
+  height: 50px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  opacity: 1;
+  cursor: pointer;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-line {
+  height: 4px;
+  width: 100%;
+  background: var(--color);
+}
+/* Tao 3 vach cho menu Icon */
+.menu-line::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  top: 5px;
+  background: var(--color);
+}
+
+.menu-line::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  top: 14px;
+  background: var(--color);
+}
+/* Header-text */
+.header-text {
+  position: absolute;
+  text-align: center;
+}
+.header-text a:hover {
+  background: transparent;
+  color: var(--color);
+  border: var(--color) 2px solid;
+}
+.header-text h1 {
+  font-size: 70px;
+  color: var(--color);
+  margin-bottom: 20px;
+}
+.header-text a {
+  padding: 15px 40px;
+  background: var(--color);
+  color: black;
+  border-radius: 50px;
+  font-size: 25px;
+  opacity: 0.3;
+  animation: headerAnimation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+/* Tao Hieu Ung cho Btn Dat Ban */
+@keyframes headerAnimation {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+/* Section: menu */
+.menu .card-column {
+  display: flex;
+  flex-direction: column;
+}
+.menu h1 {
+  text-align: center;
+  margin: 20px;
+}
+.card {
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+.menu img {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+/* Section: Hinh Anh */
+.hinhAnh h1 {
+  text-align: center;
+}
+.hinhAnh .column {
+  float: left;
+  width: 33%;
+  padding: 5px;
+}
+.hinhAnh img:hover {
+  cursor: pointer;
+}
+/* Clearfix (clear floats) */
+.hinhAnh .row::after {
+  content: "";
+  clear: both;
+  display: inline-flex;
+}
+/* Modal Content */
+.hinhAnh .modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+.active,
+.demo:hover {
+  opacity: 1;
+}
+/* Section: Counter So Lieu */
+
+/* Float four columns side by side */
+.counter .column {
+  float: left;
+  width: 33.33%;
+  padding: 0 5px;
+}
+
+.counter .row {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.counter.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .counter .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+/* Style the counter cards */
+.counter .soLieu {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: black 2px solid;
+  border-radius: 50%;
+  padding: 16px;
+  text-align: center;
+  color: black;
+  padding: 0;
+  width: 50%;
+  margin-left: 120px;
+}
+/* Section: Binh Luan */
+.binhLuan {
+  color: rgba(255, 255, 255, 0.849);
+  background-image: url(https://image.freepik.com/free-photo/empty-wooden-table-top-with-blurred-coffee-shop_7188-1337.jpg);
+  opacity: 0.8s;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.carousel-inner h2 {
+  text-align: center;
+  padding-top: 70px;
+}
+.carousel-inner .carousel-item {
+  margin-top: 200px;
+  text-align: center;
+  width: 100%;
+}
+.carousel i {
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+.carousel-indicators li {
+  margin-bottom: -20px;
+  opacity: 0.8;
+}
+/* Section: Story */
+
+/* Float four columns side by side */
+.story .column {
+  float: left;
+  width: 33.33%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.story .row {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.story .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .story .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.story .item {
+  padding: 16px;
+  text-align: center;
+}
+.item img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.item h3 {
+  margin-bottom: 25px;
+}
+.item.middle {
+  margin-top: 20px;
+  color: black;
+}
+/* Map: iframe */
+iframe {
+  width: 100%;
+}
+/* Section: Footer- Lien he  */
+/* Float four columns side by side */
+footer .column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+footer .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  footer .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+footer {
+  color: whitesmoke;
+  background: black;
+}
+footer .info {
+  padding: 16px;
+  text-align: center;
+}
+.info h3:hover,
+.info p:hover {
+  cursor: pointer;
+  color: #ffbf00;
+}
+.info p {
+  font-size: 17px;
+}
+/* Phan copyright, social Icons  */
+.copyright p {
+  color: var(--color);
+}
+.icon .fa {
+  padding: 15px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+.icon .fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+/* Btn backToTop */
+#myBtn {
+  display: block;
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+#myBtn:hover {
+  background-color: var(--color);
+}
